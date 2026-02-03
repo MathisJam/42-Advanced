@@ -3,18 +3,18 @@ from ft_filter import ft_filter
 
 
 def main():
-    if len(sys.argv) != 3:
-        print("AssertionError: the arguments are bad")
-        return
-
-    string = sys.argv[1]
-
-    if string == "":
-        print("AssertionError: the arguments are bad")
-        return
-
+    """Filtre les mots d'une string selon leur longueur
+    et affiche la liste des mots plus longs que n"""
     try:
+        assert len(sys.argv) == 3, "the arguments are bad"
+        string = sys.argv[1]
+
+        assert string != "", "the arguments are bad"
         n = int(sys.argv[2])
+
+    except AssertionError as error:
+        print(f"AssertionError: {error}")
+        return
     except ValueError:
         print("AssertionError: the arguments are bad")
         return
@@ -23,4 +23,5 @@ def main():
     print(result)
 
 
-main()
+if __name__ == "__main__":
+    main()

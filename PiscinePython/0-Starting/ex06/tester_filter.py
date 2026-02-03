@@ -2,6 +2,7 @@ from ft_filter import ft_filter
 
 
 def starts_a(w):
+    """retourne si le mot commence par a"""
     return w.startswith("a")
 
 
@@ -11,4 +12,5 @@ def main():
     print(list(res))
 
 
-main()
+if __name__ == "__main__":
+    main()
