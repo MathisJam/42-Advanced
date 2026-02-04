@@ -15,7 +15,7 @@ def main():
     except AssertionError as error:
         print(f"AssertionError: {error}")
         return
-    except ValueError:
+    except Exception:
         print("AssertionError: the arguments are bad")
         return
 

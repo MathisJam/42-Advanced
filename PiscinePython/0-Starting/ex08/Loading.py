@@ -49,3 +49,13 @@ et on complete avec des ' ' pour le reste non fini.
         except Exception:
             pass
         yield item
+
+# ========= TESTSSSS ==============
+# from time import sleep
+# from tqdm import tqdm
+# for elem in ft_tqdm(range(333)):
+#     sleep(0.005)
+# print()
+# for elem in tqdm(range(333)):
+#     sleep(0.005)
+# print()
