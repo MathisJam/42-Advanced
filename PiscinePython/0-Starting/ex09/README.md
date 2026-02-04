@@ -25,9 +25,13 @@ print(count_in_list(["toto", "tata", "toto"], "toto"))
 # tester.py :
 from ft_package_mjameau.count_in_list import count_in_list
 from ft_package_mjameau.Loading import ft_tqdm
+from time import sleep
 
+print("---- TEST COUNT_IN_LIST ----")
 print(count_in_list(["toto", "tata", "toto"], "toto"))  # output: 2
 print(count_in_list(["toto", "tata", "toto"], "tutu"))  # output: 0
 
+print("---- TEST FT_TDQM ----")
 for elem in ft_tqdm(range(333)):
-     sleep(0.005)
+    sleep(0.005)
+
