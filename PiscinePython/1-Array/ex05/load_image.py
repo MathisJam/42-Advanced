@@ -22,4 +22,3 @@ def ft_load(path: str) -> np.ndarray:
     except Exception as error:
         print(f"Error: {error}")
         return
-

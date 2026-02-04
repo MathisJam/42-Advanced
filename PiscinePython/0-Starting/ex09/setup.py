@@ -7,6 +7,6 @@ setup(
     author="mjameau",
     author_email="mjameau@42.fr",
     license="MIT",
-    url="https://github.com/MathisJam/42-Advanced/tree/main/PiscinePython/0-Starting/ex09",
+    url="https://github.com/MathisJam",
     packages=find_packages(),
 )
