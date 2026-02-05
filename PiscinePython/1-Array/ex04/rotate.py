@@ -48,6 +48,8 @@ def main():
         plt.imshow(transposed_arr, cmap="gray")
         plt.title("PEDRO PEDRO PEDRO")
         plt.show()
+    except KeyboardInterrupt:
+        print("KeyboardInterrupt: interruption signal caught")
     except Exception as error:
         print(f"Error: {error}")
 

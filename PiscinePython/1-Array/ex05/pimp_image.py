@@ -8,7 +8,10 @@ def ft_invert(array) -> np.ndarray:
 
     inv_arr = 255 - array
     plt.imshow(inv_arr)
-    plt.show()
+    try:
+        plt.show()
+    except KeyboardInterrupt:
+        print("KeyboardInterrupt: interruption signal caught")
     return inv_arr
 
 
@@ -23,7 +26,10 @@ def ft_red(array) -> np.ndarray:
     # print(f"The shape of image is: {red.shape}")
     # print(red)
     plt.imshow(red)
-    plt.show()
+    try:
+        plt.show()
+    except KeyboardInterrupt:
+        print("KeyboardInterrupt: interruption signal caught")
     return red
 
 
@@ -38,7 +44,10 @@ def ft_green(array) -> np.ndarray:
     # print(f"The shape of image is: {green.shape}")
     # print(green)
     plt.imshow(green)
-    plt.show()
+    try:
+        plt.show()
+    except KeyboardInterrupt:
+        print("KeyboardInterrupt: interruption signal caught")
     return green
 
 
@@ -53,7 +62,10 @@ def ft_blue(array) -> np.ndarray:
     # print(f"The shape of image is: {blue.shape}")
     # print(blue)
     plt.imshow(blue)
-    plt.show()
+    try:
+        plt.show()
+    except KeyboardInterrupt:
+        print("KeyboardInterrupt: interruption signal caught")
     return blue
 
 
@@ -76,7 +88,10 @@ def ft_grey(array) -> np.ndarray:
     # print(f"The shape of image is: {grey.shape}")
     # print(grey)
     plt.imshow(grey)
-    plt.show()
+    try:
+        plt.show()
+    except KeyboardInterrupt:
+        print("KeyboardInterrupt: interruption signal caught")
     return grey
 
 # =============== LES TESSSSSSSSSSSSTTTTTTTTTTTTSSSSSSSSS ================

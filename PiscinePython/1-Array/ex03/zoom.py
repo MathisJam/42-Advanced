@@ -35,6 +35,8 @@ def main():
         plt.imshow(cropped_arr.squeeze(), cmap="gray")
         plt.title("PEDRO PEDRO PEDRO")
         plt.show()
+    except KeyboardInterrupt:
+        print("KeyboardInterrupt: interruption signal caught")
     except Exception as error:
         print(f"Error: {error}")
 
