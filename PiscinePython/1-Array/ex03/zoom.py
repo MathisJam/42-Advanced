@@ -13,26 +13,18 @@ def main():
         assert array is not None, "Image cannot be loaded"
         print(array)
 
-        img = Image.fromarray(array)
+        zoomed = array[100:500, 450:850]
 
-        crop_size = 400
-        w, h = img.size
-        left = (w - crop_size) // 2 + 100
-        top = (h - crop_size) // 2 - 100
-        right = left + crop_size
-        bottom = top + crop_size
-
-        cropped_img = img.crop((left, top, right, bottom))
-        cropped_arr = np.asarray(cropped_img.convert("L"))
-        cropped_arr = cropped_arr[:, :, None]
+        img = Image.fromarray(zoomed)
+        res = np.asarray(img.convert("L"))
+        res = res[:, :, None]
 
         print(
-            f"New shape after slicing: \
-                {cropped_arr.shape} or {cropped_arr.squeeze().shape}"
+            f"New shape after slicing: {res.shape} or {res.squeeze().shape}"
         )
-        print(cropped_arr)
+        print(zoomed)
 
-        plt.imshow(cropped_arr.squeeze(), cmap="gray")
+        plt.imshow(res, cmap="gray")
         plt.title("PEDRO PEDRO PEDRO")
         plt.show()
     except KeyboardInterrupt:
