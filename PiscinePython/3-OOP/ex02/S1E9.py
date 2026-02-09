@@ -2,25 +2,28 @@ from abc import ABC, abstractmethod
 
 
 class Character(ABC):
-    '''Classe abstraite Character'''
+    '''Classe abstraite comprenant
+    Un first name et un status is_alive
+    Le status n'est pas obligatoire'''
 
     @abstractmethod
     def __init__(self, first_name, is_alive=True):
-        '''Classe : Constructeur'''
+        '''Constructeur de la Classe Character'''
         self.first_name = first_name
         self.is_alive = is_alive
 
     @abstractmethod
     def die(self):
-        '''Class : Methode abstraite'''
+        '''Abstract method de Class'''
         pass
 
 
 class Stark(Character):
-    '''Subclasse de Character'''
+    '''Subclasse : Herite de la methode die() mais la redefinie'''
     def __init__(self, first_name, is_alive=True):
         '''Subclasse : Constructeur'''
-        super().__init__(first_name, is_alive)
+        self.first_name = first_name
+        self.is_alive = is_alive
 
     def die(self):
         '''Subclasse : Methode redefinie'''
