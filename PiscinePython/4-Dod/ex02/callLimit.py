@@ -2,11 +2,17 @@ from typing import Any
 
 
 def callLimit(limit: int):
+    '''Fonction mere qui encapsule les autres
+    et qui recupere la limite'''
     count = 0
     value = limit
 
     def callLimiter(function):
+        '''Fonction qui permet d'encapsuler
+        limit_function et recuperer la function'''
         def limit_function(*args: Any, **kwds: Any):
+            '''Fonction encapsulee qui regarde si
+            la limite d'appel a ete depassee'''
             nonlocal count
             try:
                 assert count < value, "call too many times"
