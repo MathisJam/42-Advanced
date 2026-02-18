@@ -12,7 +12,7 @@ class Baratheon(Character):
         self.hairs = hairs
 
     def __str__(self):
-        '''Retourne la repr'''
+        '''Retourne repr car mm chose demande dans le sujet'''
         return self.__repr__
 
     def __repr__(self):

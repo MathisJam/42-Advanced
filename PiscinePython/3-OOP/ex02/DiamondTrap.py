@@ -7,6 +7,26 @@ class King(Baratheon, Lannister):
         '''Subclasse King : Constructeur'''
         super().__init__(first_name, is_alive)
 
+    @property
+    def eyes(self):
+        '''Property getter pour les yeux'''
+        return self._eyes
+
+    @eyes.setter
+    def eyes(self, value):
+        '''Property setter pour les yeux'''
+        self._eyes = value
+
+    @property
+    def hairs(self):
+        '''Property getter pour les cheveux'''
+        return self._hairs
+
+    @hairs.setter
+    def hairs(self, value):
+        '''Property setter pour les cheveux'''
+        self._hairs = value
+
     def set_eyes(self, color):
         '''Change la variable eyes de l'instance'''
         self.eyes = color
